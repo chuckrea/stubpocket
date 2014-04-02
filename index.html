@@ -1,0 +1,76 @@
+<!doctype html>
+<html ng-app>
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Demo</title>
+  <script src="angular.min.js"></script>
+  <script src="tickets.js"></script>
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <div ng-controller="TicketCtrl">
+    <div class="container app">
+      <div class="row text-center">
+        <h1>StubPocket!</h1>
+    <form class="form-inline" role='form' ng-submit='addTicket()'>
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="ticketTitle" placeholder="Movie Title">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="ticketDir" placeholder="Director">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="ticketSeat" placeholder="Seat Number">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="ticketTime" placeholder="Movie Time">
+      </div>
+
+      <input class=" btn btn-primary" type="submit" value="add">
+    </form>
+  </div>
+  </div>
+  
+  <hr>
+  
+    <div ng-repeat="ticket in tickets">
+      <div class="cardWrap">
+
+        <div class="card cardLeft">
+          <h1>Startup <span>Cinema</span></h1>
+          <div class="title">
+            <h2>{{ticket.title}}</h2>
+            <span>movie</span>
+          </div>
+          <div class="name">
+            <h2>{{ticket.director}}</h2>
+            <span>director</span>
+          </div>
+          <div class="seat">
+             <h2>{{ticket.seat}}</h2>
+            <span>seat</span>
+          </div>
+          <div class="time">
+            <h2>{{ticket.time}}</h2>
+            <span>time</span>
+          </div>
+        </div>
+
+        <div class="card cardRight">
+          <div class="eye"></div>
+          <div class="number">
+            <h3>{{ticket.seat}}</h3>
+            <span>seat</span>
+          </div>
+          <div class="barcode"></div>
+        </div>
+
+      </div>
+    </div>
+</div>
+  
+</body>
+</html>
