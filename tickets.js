@@ -11,6 +11,10 @@ function TicketCtrl($scope) {
     $scope.ticketDir = "";
     $scope.ticketSeat = "";
     $scope.ticketTime = "";
+  };
+
+  $scope.removeTicket = function(idx) {
+    $scope.tickets.splice(idx, 1)
   }
 
 
