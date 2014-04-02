@@ -5,8 +5,8 @@
 .cardWrap {
   width: 27em;
   margin: 3em auto;
-  color: #fff;
   float: left;
+  color: #fff;
   font-family: sans-serif; }
 
 .card {
@@ -66,8 +66,21 @@ h1 {
 .time {
   margin: .7em 0 0 1em; }
 
+.deleteBtn {
+  margin: 1.25em 0 0 1em; }
+
 .seat, .time {
   float: left; }
+
+.deleteBtn {
+  float: right;
+  color: #fff;
+}
+
+.logo {
+  font-family: 'Seymour One', sans-serif;
+  font-size: 4em;
+}
 
 .eye {
   position: relative;
